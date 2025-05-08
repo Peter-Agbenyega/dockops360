@@ -1,0 +1,12 @@
+# Ignore Docker system files
+*.log
+*.pid
+.docker/
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore other temporary files
+.DS_Store
+node_modules/

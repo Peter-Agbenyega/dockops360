@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./app
+    container_name: dockops360_app
+    ports:
+      - "8080:8080"
+  
+  db:
+    build:
+      context: ./db
+    container_name: dockops360_db
+    ports:
+      - "3306:3306"
+  
+  nginx:
+    build:
+      context: ./nginx
+    container_name: dockops360_nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - app
